@@ -1,0 +1,41 @@
+body {
+    color: white;
+    background-color: black;
+}
+
+
+p { 
+    color: white;
+    background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    color: white;
+    background-color: black;
+}
+
+span { 
+    color: white;
+    background-color: black;
+}
+/* a 앵커 태그에 묶인 부분은 span 태그로 감싸서 다크모드 적용 */
+/* a 앵커 태그에는 적용 불가 */
+
+li { 
+    color: white;
+    background-color: black;
+}
+
+ul { 
+    color: white;
+    background-color: black;
+}
+
+ol { 
+    color: white;
+    background-color: black;
+}
+
+
+
+

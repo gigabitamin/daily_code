@@ -1,0 +1,319 @@
+/* 전역 및 공통 */
+
+* {
+	margin:0 auto;
+	text-decoration: none;
+}
+
+ul {
+	list-style:none;
+}    
+
+#allWrap {
+	width:100%;
+	text-align:center;
+}
+
+
+/* header 추가 사항 */
+
+
+
+
+********* 메인 컨텐츠 ***********
+
+/* main 시작 (#rankNewsWrap) */
+#rankNewsWrap {
+	width: 1280px;
+}
+
+/* div #rankMainMenuBox 시작 (랭킹뉴스 메뉴창) */
+
+/* #rankMainMenuBox {
+	z-index:12;
+}  */
+
+#rankMainMenuItem {
+	height:45px;
+	line-height:45px;
+} 
+/* li 상위 ul (#rankMainMenuItem)의 height 값을 맞춰줘야 브라우저 리사이징시 inline-block 메뉴가 자동 줄넘김으로 바뀌지 않고 고정됨 */
+
+#rankMainMenuBox > ul > li {
+	display: inline-block;
+	margin-top: 30px;
+	font: 28px bold black;
+    list-style-type: none;
+	width:318px;
+	height:35px;
+	line-height:35px;
+}
+
+
+#rankMainMenuBox li:hover {
+	background-color: rgb(201, 192, 192);
+	color: white;
+}
+
+/* section #rankNews 시작 (TOP4 / TOP20) */
+
+#rankNews {
+	position: relative;
+	width: 1280px;
+}
+
+/* div #rankNewsBox 시작 (TOP4 / TOP20 전체 감싸는 박스) */
+
+#rankNewsBox img:hover { cursor:pointer;}
+
+
+/* article #rankImgBox 시작 (TOP4 이미지뉴스) */
+
+#rankImgBox {
+	width:1280px;
+	height:310px;
+	margin-top:20px;
+	border-bottom:solid 1px #cccccc;
+}
+
+#rankImgBox div {
+	display:none;
+	margin-top:20px;
+}
+
+#rankImgBox div:first-child { 
+	display:inline-block;
+}	
+
+
+/* div .rankImgAll #rankImg1 시작 */
+
+.rankImgAll { 
+	width:100%;
+	height:270px;
+	overflow:hidden;
+}
+
+.rankImgAll > ul > li {
+	display: inline-block;
+	list-style:none;
+	width:310px;
+	height:270px;
+	line-height:270px;
+	overflow:hidden;
+	margin-top: 3px;
+}
+
+.rankImgAll > ul > li > a > img {
+	width:310px;
+	height:270px;
+	background-size: auto; 
+	/* 창에 이미지 리사이징 제대로 되는지 확인 */
+	/* transform: translate(-50%, -50%); */
+	/* object-fit:fill; */
+} 
+
+.rankImgAll a:hover {
+	transition: opacity 0.5s ease;
+	opacity: 0.7;
+}
+
+.rankImgAll a:hover img {
+	opacity: 1;
+	transform: scale(0.9);
+}
+
+
+/* .rankImgTilte (TOP4 이미지뉴스 타이틀) */
+
+.rankImgTilte {
+	color: white;
+	background: black;
+	font-size: 20;
+	height:50px;
+	line-height:50px;
+	text-shadow: 3px;
+}
+
+
+/* #slidePanel 시작 (.rankImgAll > ul)  (슬라이드 기능 재삽입시 상위 div 박스(.rankImgAll #rankImg1 2 3 4) 위치 확인) */
+/* #slideImage 시작 (.rankImgAll > ul > li) */
+
+.slideImage a:hover {
+	transition: opacity 0.5s ease;
+	opacity: 0.7;
+}
+
+.slideImage a:hover img {
+	opacity: 1;
+	transform: scale(0.9);
+}
+
+/* .rankImg_item TOP4 뉴스 이미지*/
+
+/* div .rankImgAll #rankImg2 시작 */
+/* div .rankImgAll #rankImg3 시작 */
+/* div .rankImgAll #rankImg4 시작 */
+
+
+
+/* article #rankTopBox 시작 (TOP20 종합뉴스) */
+
+#rankTopBox {
+	width:100%;
+	height:100%;
+}
+
+/* div # rankTopTitleBox TOP20 타이틀 시작 */
+
+#rankTopTitleBox > h2 {
+	color: white;
+	background: black;
+	font-size: 20;
+	height:50px;
+	line-height:50px;
+	text-shadow: 3px;
+}
+
+/* div .rankTop #rankTop1 시작 */
+
+.rankTop {
+	width:1280px;
+	display: inline-block;
+	text-align: center;
+}
+
+#rankTop1, #rankTop2 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width:48%;
+	text-decoration: none;
+	font-size: 1.6em;
+	font: bold;
+}
+
+
+
+/* #rankTop1 > ul */
+
+.rankTop ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	margin-right: 30px;
+}
+
+/* #rankTop1 > ul > li */
+
+.rankTop > ul > li {
+	text-align: center;
+	margin: 3px;
+    padding: 5px;
+    position: relative;
+    display: table;
+    table-layout: fixed;
+	overflow: hidden;
+	margin-left: 20px;
+	width: 100%;
+}
+
+.rankTop > ul > li:hover {
+	opacity: 0.5;
+    color:black;
+    text-decoration: none;
+    border-bottom: 1px #cccccc;
+}
+
+.rankTop > ul > li::marker {
+	color: black;
+}
+ 
+/* div .list_ranking_num 기사번호 (.rankTop > ul > li > div) (ol 대신 속성 넣기 위해 사용) */
+
+.rankTop > ul > li > div {
+    margin: 0;
+    padding: 0;
+    display: table-cell;
+    vertical-align: top;
+	overflow: hidden;
+}
+/* 테이블 속성 부모(li) relative 자식 vertical-align : top; */
+
+
+.list_ranking_num {
+	width:50px;
+	display: flex;
+}
+
+/* div .list_content 기사제목 & 시간 박스 고정크기 정해서 정렬, 시간은 왼쪽 아래 정렬 */
+
+.list_content {
+	width:400px;
+	text-align: left;
+}
+
+.list_content > div {
+	display: table-cell;
+	vertical-align: bottom;
+} /* span #list_content_time 의 상위 부모인 div에 table-cell bottom 부여 자식이 span에는 absolute left 부여 왼쪽하단 정렬 */
+
+
+/* a .list_content_par 기사제목 (.rankTop > ul > li > a) */
+
+.list_content_par{
+	font-size: 20px;
+	font: bold;
+}
+
+/* span .list_content_time 기사시간 */
+
+.list_content_time {
+	position: absolute;
+	bottom: 8px;
+	left: 60px;
+	color: grey;
+	font-size: 0.6em;
+}
+
+/* div .list_img 우측으로 사진정렬, 아래칸으로 내려가지 않도록 주의, 테이블셀 사용중, 부모에게 relative */
+
+.list_img {
+	width: 100px;
+	height: 100px;
+	display: table-cell;
+    vertical-align: top;
+	border-radius: 7px;
+	float: right;
+}
+
+.list_img > a > img {
+	width: 100px;
+	height: 100px;
+	margin: 0;
+    padding: 0;
+}
+  
+
+
+
+/* footer 추가 사항 */
+
+#moveToTop:hover { opacity:0.7; cursor:pointer;}
+
+/* 다크모드 */
+
+body {
+	background-color: white;
+	color: black;
+}
+
+.dark_mode {
+	background-color: black;
+	color: white;
+}
+
+/* #dark_mode_btn {
+	width:50px;
+	height:20px;
+	background: url(image/dark_mode.png);
+} */

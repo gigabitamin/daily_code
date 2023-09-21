@@ -1,0 +1,66 @@
+body {
+    color: white !important;
+    background-color: black !important;
+}
+
+p { 
+    color: white !important;
+    background-color: black !important;
+}
+
+header { 
+    color: white !important;
+    background-color: black !important;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    color: white !important;
+    background-color: black !important;
+}
+
+span { 
+    color: white !important;
+    background-color: black !important;
+}
+/* a 앵커 태그에 묶인 부분은 span 태그로 감싸서 다크모드 적용 */
+/* a 앵커 태그에는 적용 불가 */
+
+/* a {
+    color: inherit;
+} */
+
+li { 
+    color: white !important;
+    background-color: black !important;
+}
+
+ul { 
+    color: white !important;
+    background-color: black !important;
+}
+
+ol { 
+    color: white !important;
+    background-color: black !important;
+}
+
+div {
+    color: white !important;
+    background-color: black !important;
+}
+
+
+/* 6 인기뉴스 메뉴 마우스 호버링 */
+#rankMainMenuBox li:hover {
+	background-color: whitesmoke !important;
+    color : black !important;
+}
+
+
+
+/* 7 위클리 요일뉴스 요일탭 마우스 호버링 */
+#weekly_ul li:hover {
+	background-color: whitesmoke !important;
+    color : black !important;
+}
+
